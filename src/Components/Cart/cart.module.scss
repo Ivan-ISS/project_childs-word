@@ -1,0 +1,23 @@
+@import "/src/styles/_colors";
+@import "/src/styles/_variables";
+
+.cart {
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover * {
+        fill: $baseBrand;
+        color: $baseBrand;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+
+        path {
+            fill: $baseBlack;
+        }
+    }
+}

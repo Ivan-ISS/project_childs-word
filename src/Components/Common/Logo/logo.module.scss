@@ -1,0 +1,15 @@
+@import "/src/styles/_colors";
+@import "/src/styles/_variables";
+
+.link {
+    display: flex;
+
+    svg {
+        width: 150px;
+        height: 24px;
+
+        path {
+            fill: $baseBrand;
+        }
+    }
+}
