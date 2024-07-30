@@ -3,9 +3,34 @@
 
 .products {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 25px;
 
-    .title {
-        font-family: 'Circe Rounded';
-        font-weight: 800;
+    .showcase {
+        max-width: 1346px;
+        justify-content: center;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        /* display: grid;
+        grid-template-columns: repeat(5, 250px);
+        grid-gap: 24px; */
+    }
+}
+
+@media (max-width: 560px) {
+
+    .products {
+
+        .showcase {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 18px;
+        }
     }
 }

@@ -1,15 +1,13 @@
 @import "/src/styles/_colors";
 @import "/src/styles/_variables";
 
-.item {
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-}
 
-.interactive {
+.link {
+    color: $baseBlack;
     transition: $transitionHover;
-    border-bottom: solid 3px transparent;
+    border-left: solid 3px transparent;
+    font-weight: 700;
+    padding-left: 5px;
     
     &:hover {
         color: $baseBrand;
@@ -17,6 +15,6 @@
 }
 
 .active {
-    border-bottom: solid 3px $baseBrand;
+    border-left: solid 3px $baseBrand;
     color: $baseBrand;
 }
