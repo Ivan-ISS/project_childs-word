@@ -24,6 +24,20 @@
     }
 }
 
+.segmentCounter {
+
+    &:active {
+        background: $baseBrand;
+        color: $baseWhite;
+
+        svg {
+            path {
+                fill: $baseWhite;
+            }
+        }
+    }
+}
+
 .rounded {
     border-radius: 12px;
 }
