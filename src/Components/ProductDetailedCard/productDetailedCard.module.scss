@@ -153,6 +153,22 @@
     }
 }
 
+@media (max-width: 850px) {
+
+    .detailedCard {
+
+        .data {
+
+            .infoBlock {
+
+                .buttonPanel {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 767px) {
 
     .detailedCard {
