@@ -1,17 +1,13 @@
-import styles from './secondaryButton.module.scss';
+import styles from './primaryButton.module.scss';
 import { ButtonHTMLAttributes } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     text?: number | string;
-    segment?: 'counter'; 
-    edges?: 'rounded' | 'leftRounded' | 'rightRounded';
-    adaptive: boolean;
     isActive?: boolean;
     isDisabled?: boolean;
-    children?: JSX.Element;
 }
 
-export default function Button({ text, segment, edges, adaptive, isActive, isDisabled, children, ...props }: ButtonProps) {
+export default function Button({ text, isActive, isDisabled, ...props }: ButtonProps) {
 
     const handleClickBtn = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         if (props.onClick) {
@@ -25,17 +21,12 @@ export default function Button({ text, segment, edges, adaptive, isActive, isDis
             onClick={handleClickBtn}
             className={`
                 ${styles.button}
-                ${text === '...' ? styles.blank : null}
-                ${segment ? styles.segmentCounter : null}
-                ${edges && styles[edges]}
-                ${adaptive ? styles.buttonAdaptive : null}
                 ${isActive ? styles.active : null}
                 ${isDisabled ? styles.disabled : null}
             `}
             disabled={isDisabled}
         >
-            {!text && children}
-            {!children && <div className={styles.text}>{text}</div>}
+            <div>{text}</div>
         </button>
     );
 }
