@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../../redux/store';
 import { updateCart, addToCartReqArgs } from '../../redux/slices/cartSlice/cartSlice';
 import { selectCart, selectCartReqArgs, selectTotalPrice } from '../../redux/slices/cartSlice/cartSelector';
+import { submitCart } from '../../redux/slices/ordersSlice/ordersSlice';
 import Stars from '../Common/SvgGenComponent/svgGenComponent';
 import ArrowUndo from '../Common/SvgGenComponent/svgGenComponent';
 import PrimaryButton from '../Common/PrimaryButton/primaryButton';
@@ -52,6 +53,10 @@ export default function ProductDetailedCard({ product }: ProductDetailedCardProp
 
     const handleClickCounter = async (id: string, quantity: number) => {
         dispatch(addToCartReqArgs({ id, quantity }));
+    };
+
+    const handleClickOrder = () => {
+        dispatch(submitCart());
     };
 
     return (
@@ -104,6 +109,7 @@ export default function ProductDetailedCard({ product }: ProductDetailedCardProp
                                         !resValidate.minPrice.isValid ||
                                         !resValidate.maxQuantity.isValid
                                     )}
+                                    onClick={handleClickOrder}
                                 />
                             </div>
                         }
