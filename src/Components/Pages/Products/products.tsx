@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../../../redux/store';
 import { selectProducts, selectProductsStatus } from '../../../redux/slices/productsSelector';
 import { fetchProducts, increasePage, changePagination, reset } from '../../../redux/slices/productsSlice';
+import { updateCart } from '../../../redux/slices/cartSlice/cartSlice';
+import { selectCartReqArgs } from '../../../redux/slices/cartSlice/cartSelector';
 import { selectQueryParams, selectTotalProducts, selectIsPagination } from '../../../redux/slices/productsSelector';
 // import { fetchProduct } from '../../../redux/slices/productItemSlice/productItemSlice';
 import ProductShortCard from '../../ProductShortCard/productShortCard';
@@ -20,6 +22,7 @@ export default function Products() {
     const queryParams = useAppSelector(selectQueryParams);
     const totalProducts = useAppSelector(selectTotalProducts);
     const products = useAppSelector(selectProducts);
+    const cartReqArgs = useAppSelector(selectCartReqArgs);
     const isPagination = useAppSelector(selectIsPagination);
     const [ currentPage, setCurrentPage ] = useState<number>(1);
     const [ totalPages, setTotalPages ] = useState<number>(0);
@@ -43,6 +46,12 @@ export default function Products() {
         }
     }, [dispatch, isPagination, queryParams.limit]);
 
+    useEffect(() => {
+        if (cartReqArgs.data.length) {
+            dispatch(updateCart({ data: cartReqArgs.data }));
+        }
+    }, [cartReqArgs.data, dispatch]);
+
     const handleClickPagination = (currentPage: number) => {
         dispatch(fetchProducts({ page: currentPage, limit: queryParams.limit }));
     };
@@ -61,9 +70,9 @@ export default function Products() {
                     <>
                         <Switch onClick={() => dispatch(changePagination())} isActive={isPagination} label={'Вкл/выкл пагинацию'}/>
                         <div className={styles.showcase}>
-                            {products.length && products.map((product, index) => (
+                            {products.length ? products.map((product, index) => (
                                 <ProductShortCard key={index} product={product} handleClickCard={handleClickCard}/>
-                            ))}
+                            )) : ''}
                         </div>
                     </>
             }
