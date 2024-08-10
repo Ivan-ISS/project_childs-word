@@ -8,7 +8,7 @@ import { selectCart, selectCartReqArgs, selectTotalPrice } from '../../redux/sli
 import { submitCart } from '../../redux/slices/ordersSlice/ordersSlice';
 import Stars from '../Common/SvgGenComponent/svgGenComponent';
 import ArrowUndo from '../Common/SvgGenComponent/svgGenComponent';
-import PrimaryButton from '../Common/PrimaryButton/primaryButton';
+import PrimaryButton from '../Common/Buttons/PrimaryButton/primaryButton';
 import formatToPrice from '../../utils/formatToPrice';
 import Item from '../Common/Item/item';
 import Counter from '../Common/Counter/counter';

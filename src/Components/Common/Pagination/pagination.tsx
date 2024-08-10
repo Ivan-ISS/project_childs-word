@@ -1,6 +1,6 @@
 import styles from './pagination.module.scss';
 import { useEffect, useState } from 'react';
-import SecondaryButton from '../SecondaryButton/secondaryButton';
+import SecondaryButton from '../Buttons/SecondaryButton/secondaryButton';
 import ArrowLeft from '../SvgGenComponent/svgGenComponent';
 import ArrowRight from '../SvgGenComponent/svgGenComponent';
 

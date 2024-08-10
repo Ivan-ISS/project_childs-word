@@ -1,6 +1,6 @@
 import styles from './burgerButton.module.scss';
 import { ButtonHTMLAttributes } from 'react';
-import useCloseOut from '../../../hooks/useCloseOut';
+import useCloseOut from '../../../../hooks/useCloseOut';
 
 export interface BurgerButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: JSX.Element;
