@@ -7,7 +7,6 @@ import { fetchProducts, increasePage, changePagination, reset } from '../../../r
 import { updateCart } from '../../../redux/slices/cartSlice/cartSlice';
 import { selectCartReqArgs, selectCart } from '../../../redux/slices/cartSlice/cartSelector';
 import { selectQueryParams, selectTotalProducts, selectIsPagination } from '../../../redux/slices/productsSelector';
-// import { fetchProduct } from '../../../redux/slices/productItemSlice/productItemSlice';
 import ProductShortCard from '../../ProductShortCard/productShortCard';
 import Pagination from '../../Common/Pagination/pagination';
 import Switch from '../../Common/Switch/switch';
@@ -25,7 +24,6 @@ export default function Products() {
     const cartReqArgs = useAppSelector(selectCartReqArgs);
     const cart = useAppSelector(selectCart);
     const isPagination = useAppSelector(selectIsPagination);
-    // const [ currentPage, setCurrentPage ] = useState<number>(1);
     const [ totalPages, setTotalPages ] = useState<number>(0);
 
     const { targetElement: section } = useScrollBot({
@@ -59,7 +57,6 @@ export default function Products() {
 
     const handleClickCard = (id: string) => {
         navigate(`${routes.product()}/${id}`);
-        // dispatch(fetchProduct({ id: id }));
     };
 
     return (
@@ -80,8 +77,6 @@ export default function Products() {
             { isPagination && totalPages &&
                 <Pagination
                     totalPages={totalPages}
-                    // currentPage={currentPage}
-                    // setCurrentPage={setCurrentPage}
                     handlePagination={handleClickPagination}
                 />
             }
