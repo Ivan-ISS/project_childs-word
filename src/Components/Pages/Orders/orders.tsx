@@ -35,7 +35,7 @@ export default function Orders() {
         <section ref={section} className={styles.orders}>
             <div className={styles.set}>
                 {orders.data.map((order, index) => (
-                    <OrderCard key={index} order={order} orderIndex={index + 1} handleClickOrder={ () => null }/>
+                    <OrderCard key={index} order={order} orderIndex={index + 1}/>
                 ))}
             </div>
         </section>
