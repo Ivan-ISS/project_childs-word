@@ -1,22 +1,22 @@
-import styles from './productBasketCard.module.scss';
-import { IProduct } from '../../types/entityTypes';
+import styles from './basketWidgetCard.module.scss';
+import { IProduct } from '../../../types/entityTypes';
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from '../../redux/store';
-import { addToCartReqArgs } from '../../redux/slices/cartSlice/cartSlice';
-import PriceGroup from '../Common/PriceGroup/priceGroup';
-import Picture from '../Common/Picture/picture';
-import Title from '../Common/Title/title';
-import Counter from '../Common/Counter/counter';
+import { useAppDispatch } from '../../../redux/store';
+import { addToCartReqArgs } from '../../../redux/slices/cartSlice/cartSlice';
+import PriceGroup from '../../Common/PriceGroup/priceGroup';
+import Picture from '../../Common/Picture/picture';
+import Title from '../../Common/Title/title';
+import Counter from '../../Common/Counter/counter';
 import TrashButton from './TrashButton/trashButton';
-import routes from '../../routes';
+import routes from '../../../routes';
 
-export interface ProductBasketCardProps {
+export interface BasketWidgetCardProps {
     product: IProduct
     quantity: number;
     handleClickProduct: () => void;
 }
 
-export default function ProductBasketCard({ product, quantity, handleClickProduct }: ProductBasketCardProps) {
+export default function BasketWidgetCardCard({ product, quantity, handleClickProduct }: BasketWidgetCardProps) {
     const { id, title, price, picture } = product;
     const dispatch = useAppDispatch();
     const navigate = useNavigate();

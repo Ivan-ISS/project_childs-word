@@ -1,7 +1,7 @@
 import styles from './trashButton.module.scss';
 import { HTMLAttributes } from 'react';
-import Trash from '../../Common/SvgGenComponent/svgGenComponent';
-import Item from '../../Common/Item/item';
+import Trash from '../../../Common/SvgGenComponent/svgGenComponent';
+import Item from '../../../Common/Item/item';
 
 export interface TrashButtonProps extends HTMLAttributes<HTMLButtonElement> {}
 
