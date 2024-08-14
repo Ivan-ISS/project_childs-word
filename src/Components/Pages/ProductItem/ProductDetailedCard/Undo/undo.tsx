@@ -1,6 +1,6 @@
 import styles from './undo.module.scss';
-import ArrowUndo from '../../Common/SvgGenComponent/svgGenComponent';
-import Item from '../../Common/Item/item';
+import ArrowUndo from '../../../../Common/SvgGenComponent/svgGenComponent';
+import Item from '../../../../Common/Item/item';
 
 export default function IconButton() {
 

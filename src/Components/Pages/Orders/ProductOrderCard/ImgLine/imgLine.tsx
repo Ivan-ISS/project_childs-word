@@ -1,7 +1,7 @@
 import styles from './imgLine.module.scss';
 import { useState, useEffect } from 'react';
-import Picture from '../../Common/Picture/picture';
-import useScreenSize from '../../../hooks/useScreenSize';
+import Picture from '../../../../Common/Picture/picture';
+import useScreenSize from '../../../../../hooks/useScreenSize';
 
 export interface ImgLineProps {
     pictures: string[];

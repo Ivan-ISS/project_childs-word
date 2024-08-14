@@ -1,16 +1,16 @@
 import styles from './buttonPanel.module.scss';
-import { defaultStateValid } from '../../../data';
-import { IResultValidateCart } from '../../../types/dataTypes';
+import { defaultStateValid } from '../../../../../data';
+import { IResultValidateCart } from '../../../../../types/dataTypes';
 import { useState, useEffect } from 'react';
-import { useAppSelector, useAppDispatch } from '../../../redux/store';
-import { addToCartReqArgs } from '../../../redux/slices/cartSlice/cartSlice';
-import { selectCart, selectTotalPrice } from '../../../redux/slices/cartSlice/cartSelector';
-import { submitCart } from '../../../redux/slices/ordersSlice/ordersSlice';
-import PrimaryButton from '../../../Components/Common/Buttons/PrimaryButton/primaryButton';
-import Counter from '../../../Components/Common/Counter/counter';
-import validateCart from '../../../utils/validateCart';
-import hasProductInCart from '../../../utils/hasProductInCart';
-import findProductInCart from '../../../utils/findProductInCart';
+import { useAppSelector, useAppDispatch } from '../../../../../redux/store';
+import { addToCartReqArgs } from '../../../../../redux/slices/cartSlice/cartSlice';
+import { selectCart, selectTotalPrice } from '../../../../../redux/slices/cartSlice/cartSelector';
+import { submitCart } from '../../../../../redux/slices/ordersSlice/ordersSlice';
+import PrimaryButton from '../../../../../Components/Common/Buttons/PrimaryButton/primaryButton';
+import Counter from '../../../../../Components/Common/Counter/counter';
+import validateCart from '../../../../../utils/validateCart';
+import hasProductInCart from '../../../../../utils/hasProductInCart';
+import findProductInCart from '../../../../../utils/findProductInCart';
 
 export interface ButtonPanelProps {
     id: string;

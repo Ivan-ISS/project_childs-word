@@ -1,6 +1,6 @@
 import styles from './info.module.scss';
-import Price from '../../Common/Price/price';
-import formatDate from '../../../utils/formatDate';
+import Price from '../../../../Common/Price/price';
+import formatDate from '../../../../../utils/formatDate';
 
 export interface InfoProps {
     createdAt: string;
