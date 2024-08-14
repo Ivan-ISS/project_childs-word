@@ -1,7 +1,7 @@
-import { productsLoadParams } from '../../data';
-import { IMeta, IProduct, IGetProducts, IError } from '../../types/entityTypes';
+import { productsLoadParams } from '../../../data';
+import { IMeta, IProduct, IGetProducts, IError } from '../../../types/entityTypes';
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import routes from '../../routes';
+import routes from '../../../routes';
 
 export interface FetchProductsError {
     message: string;
