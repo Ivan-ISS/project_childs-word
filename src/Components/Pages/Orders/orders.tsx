@@ -2,7 +2,7 @@ import styles from './orders.module.scss';
 import { useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../../../redux/store';
 import { getOrders, increasePage } from '../../../redux/slices/ordersSlice/ordersSlice';
-import { selectOrders, selectParams, selectTotalOrders, selectStatus } from '../../../redux/slices/ordersSlice/ordersSelector';
+import { selectOrders, selectParams, selectStatus } from '../../../redux/slices/ordersSlice/ordersSelector';
 import { updateCart } from '../../../redux/slices/cartSlice/cartSlice';
 import { selectCartReqArgs, selectCart } from '../../../redux/slices/cartSlice/cartSelector';
 import ProductOrderCard from './ProductOrderCard/productOrderCard';
@@ -11,15 +11,15 @@ import useScrollBot from '../../../hooks/useScrollBot';
 export default function Orders() {
     const dispatch = useAppDispatch();
     const orders = useAppSelector(selectOrders);
-    const params = useAppSelector(selectParams);
-    const totalOrders = useAppSelector(selectTotalOrders);
+    const { limit, currentPage, totalOrders } = useAppSelector(selectParams);
     const status = useAppSelector(selectStatus);
     const cartReqArgs = useAppSelector(selectCartReqArgs);
     const cart = useAppSelector(selectCart);
+
     const { targetElement: section } = useScrollBot({
         func: async () => {
-            if (status === 'successfully' && totalOrders > params.limit * (params.currentPage - 1)) {
-                await dispatch(getOrders({ page: params.currentPage, limit: params.limit }));
+            if (status === 'successfully' && totalOrders > limit * (currentPage - 1)) {
+                await dispatch(getOrders({ page: currentPage, limit: limit }));
                 dispatch(increasePage());
             }
         }
@@ -34,7 +34,7 @@ export default function Orders() {
     return (
         <section ref={section} className={styles.orders}>
             <div className={styles.set}>
-                {orders.data.map((order, index) => (
+                {orders.map((order, index) => (
                     <ProductOrderCard key={index} order={order} orderIndex={index + 1}/>
                 ))}
             </div>
