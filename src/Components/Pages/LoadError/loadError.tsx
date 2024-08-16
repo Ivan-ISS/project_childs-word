@@ -1,7 +1,7 @@
 import styles from './loadError.module.scss';
 import { useNavigate } from 'react-router-dom';
-import PrimaryButton from '../../Common/Buttons/PrimaryButton/primaryButton';
 import routes from '../../../routes';
+import PrimaryButton from '../../Common/Buttons/PrimaryButton/primaryButton';
 
 export interface LoadErrorProps {
     text: string;

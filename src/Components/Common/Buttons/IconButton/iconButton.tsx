@@ -1,7 +1,7 @@
 import styles from './iconButton.module.scss';
 import { HTMLAttributes } from 'react';
-import Item from '../../Item/item';
 import SvgGenComponents from '../../SvgGenComponent/svgGenComponent';
+import Item from '../../Item/item';
 
 
 export interface IconButtonProps extends HTMLAttributes<HTMLButtonElement> {

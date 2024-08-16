@@ -1,9 +1,9 @@
 import styles from './counter.module.scss';
 import { ButtonHTMLAttributes, useState, useEffect } from 'react';
-import SecondaryButton from '../Buttons/SecondaryButton/secondaryButton';
-import CounterInput from '../Input/CounterInput/counterInput';
 import IconPlus from '../SvgGenComponent/svgGenComponent';
 import IconMinus from '../SvgGenComponent/svgGenComponent';
+import SecondaryButton from '../Buttons/SecondaryButton/secondaryButton';
+import CounterInput from '../Input/CounterInput/counterInput';
 
 export interface CounterProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     idEntity: string;

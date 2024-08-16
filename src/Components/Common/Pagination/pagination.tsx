@@ -1,9 +1,9 @@
 import styles from './pagination.module.scss';
 import { useEffect, useState } from 'react';
-import SecondaryButton from '../Buttons/SecondaryButton/secondaryButton';
+import getPaginationView from '../../../utils/getPaginationView';
 import ArrowLeft from '../SvgGenComponent/svgGenComponent';
 import ArrowRight from '../SvgGenComponent/svgGenComponent';
-import getPaginationView from '../../../utils/getPaginationView';
+import SecondaryButton from '../Buttons/SecondaryButton/secondaryButton';
 
 export interface PaginationProps {
     totalPages: number;
