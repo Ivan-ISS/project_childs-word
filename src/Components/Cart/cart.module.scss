@@ -7,21 +7,14 @@
     align-items: center;
     cursor: pointer;
 
-    & * {
+    & div,
+    & path {
         transition: $transitionHover;
     }
 
-    &:hover * {
+    &:hover div,
+    &:hover path {
         fill: $baseBrand;
         color: $baseBrand;
-    }
-
-    svg {
-        width: 20px;
-        height: 20px;
-
-        path {
-            fill: $baseBlack;
-        }
     }
 }
