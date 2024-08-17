@@ -1,0 +1,7 @@
+.eslintrc.cjs
+tsconfig.*
+package*
+README.md
+**/*.html
+*.scss
+dist
