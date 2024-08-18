@@ -5,3 +5,5 @@ README.md
 **/*.html
 *.scss
 dist
+
+svgGenComponent.tsx

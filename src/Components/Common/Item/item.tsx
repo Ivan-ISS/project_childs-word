@@ -9,7 +9,6 @@ export interface ItemProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export default function Item({ text, value, isActive, interactive, ...props }: ItemProps) {
-
     return (
         <div
             {...props}
@@ -20,7 +19,8 @@ export default function Item({ text, value, isActive, interactive, ...props }: I
             `}
         >
             <>
-                {text}{value ? ` (${value})` : ''}
+                {text}
+                {value ? ` (${value})` : ''}
             </>
         </div>
     );
