@@ -29,7 +29,7 @@ export default function OrderWidget({ order, orderIndex, handleClickWidget }: Or
         dispatch(addToCart(orderState));
     };
 
-    const a = 5;
+    const b = 5;
 
     return (
         <div className={styles.widget}>
