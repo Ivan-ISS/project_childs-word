@@ -30,6 +30,7 @@ export default function OrderWidget({ order, orderIndex, handleClickWidget }: Or
     };
 
     const b = 5;
+    фца;
 
     return (
         <div className={styles.widget}>
