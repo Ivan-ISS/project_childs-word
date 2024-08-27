@@ -15,12 +15,12 @@ npm install
 ```
 &nbsp; __3.__ Для запуска приложения в режиме development выполнить:
 ```bash
-npm run start
+npm run dev
 ```
 
 &nbsp; __4.__ Для запуска приложения в режиме production необходимо собрать проект:
 ```bash
-npm run build:prod
+npm run build
 ```
 &nbsp; __5.__ После сборки выполнить:
 ```bash
@@ -102,11 +102,9 @@ __Клиентская часть сервиса проекта__ состоит
 <img src="https://img.shields.io/badge/HTML5-red?logo=html5&logoColor=white" alt="HTML5"/>&nbsp;
 <img src="https://img.shields.io/badge/CSS3-blue?logo=css3&logoColor=white" alt="CSS3"/>&nbsp;
 <img src="https://img.shields.io/badge/-SASS-DB7093?logo=sass&logoColor=white" alt="SASS"/>&nbsp;
-<img src="https://img.shields.io/badge/-Webpack-99d6f8?logo=Webpack&logoColor=gray" alt="WEBPACK"/>&nbsp;
 
 ## В проекте реализованы технические требования:
 &nbsp; :heavy_check_mark: Клиентская часть написана с помощью React, Redux Toolkit и TypeScript<br>
-&nbsp; :heavy_check_mark: Разработка проекта выполнена с использованием сборщика webpack<br>
 &nbsp; :heavy_check_mark: Подключен линтинг кода (ESLint)<br>
 &nbsp; :heavy_check_mark: Настроен линтинг кода автоматическим при коммите<br>
 &nbsp; :heavy_check_mark: Для запросов к API используются методы createAsyncThunk<br>
@@ -142,12 +140,12 @@ npm install
 ```
 &nbsp; __3.__ Для запуска приложения в режиме development выполнить:
 ```bash
-npm run start
+npm run dev
 ```
 
 &nbsp; __4.__ Для запуска приложения в режиме production необходимо собрать проект:
 ```bash
-npm run build:prod
+npm run build
 ```
 &nbsp; __5.__ После сборки выполнить:
 ```bash
